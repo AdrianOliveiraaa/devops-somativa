@@ -1,20 +1,26 @@
-# Etapa 1 - build da aplicação
-FROM node:18-alpine as build
+# Etapa 1: Construção
+FROM node:18-alpine AS build
 
 WORKDIR /app
 
-COPY package.json ./
-COPY package-lock.json ./
+# Copia o package.json e package-lock.json para instalar as dependências
+COPY package.json package-lock.json ./
 RUN npm install
 
+# Copia o restante dos arquivos do projeto
 COPY . ./
+
+# Faz o build da aplicação
 RUN npm run build
 
-# Etapa 2 - servir a build com nginx
-FROM nginx:stable-alpine
+# Etapa 2: Servir a aplicação com Nginx
+FROM nginx:alpine
 
+# Copia os arquivos de build para a pasta onde o Nginx serve os arquivos
 COPY --from=build /app/build /usr/share/nginx/html
 
+# Expondo a porta 80 para o Nginx
 EXPOSE 80
 
+# Comando para rodar o Nginx em primeiro plano
 CMD ["nginx", "-g", "daemon off;"]
