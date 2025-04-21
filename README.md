@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Projeto React - Usado para estudo da disciplina DevOps
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
