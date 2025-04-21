@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/devops-somativa/static/css/main.801ed9b5.css",
+    "main.js": "/devops-somativa/static/js/main.4a94e060.js",
+    "static/js/453.db4e06de.chunk.js": "/devops-somativa/static/js/453.db4e06de.chunk.js",
+    "index.html": "/devops-somativa/index.html",
+    "main.801ed9b5.css.map": "/devops-somativa/static/css/main.801ed9b5.css.map",
+    "main.4a94e060.js.map": "/devops-somativa/static/js/main.4a94e060.js.map",
+    "453.db4e06de.chunk.js.map": "/devops-somativa/static/js/453.db4e06de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.801ed9b5.css",
+    "static/js/main.4a94e060.js"
+  ]
+}
