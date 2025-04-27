@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Enviar alerta para o Discord
-        uses: Ilshidur/action-discord@master
+        uses: tsickert/discord-webhook@v7.0.0
         with:
-          webhook: ${{secrets.WEBHOOK}}
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
           message: |
             Novo commit ou merge na branch main!
             - Autor: ${{ github.actor }}
