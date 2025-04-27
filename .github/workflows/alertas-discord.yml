@@ -14,8 +14,8 @@ jobs:
       - name: Enviar alerta para o Discord
         uses: tsickert/discord-webhook@v7.0.0
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          message: |
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          content: |
             Novo commit ou merge na branch main!
             - Autor: ${{ github.actor }}
             - Commit: ${{ github.event.head_commit.message }}
