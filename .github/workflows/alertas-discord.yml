@@ -16,7 +16,7 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           message: |
-            🚀 Novo commit ou merge na branch main!
+            Novo commit ou merge na branch main!
             - Autor: ${{ github.actor }}
             - Commit: ${{ github.event.head_commit.message }}
             - Repositório: ${{ github.repository }}
